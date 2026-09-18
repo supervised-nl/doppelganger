@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ · DOPPELGÄNGER.md</title>
+<meta name="description" content="Answers on tone of voice aliases, AGENTS.md and BRAND.md, secrets, accuracy, licensing, and why DOPPELGANGER.md has no hosted loader.">
+<link rel="canonical" href="https://doppelganger.md/faq">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DOPPELGÄNGER.md">
+<meta property="og:url" content="https://doppelganger.md/faq">
+<meta property="og:title" content="FAQ · DOPPELGÄNGER.md">
+<meta property="og:description" content="Answers on tone of voice aliases, AGENTS.md and BRAND.md, secrets, accuracy, licensing, and why DOPPELGANGER.md has no hosted loader.">
+<meta property="og:image" content="https://doppelganger.md/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DOPPELGÄNGER.md. One open Markdown file that teaches any AI your voice.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FAQ · DOPPELGÄNGER.md">
+<meta name="twitter:description" content="Answers on tone of voice aliases, AGENTS.md and BRAND.md, secrets, accuracy, licensing, and why DOPPELGANGER.md has no hosted loader.">
+<meta name="twitter:image" content="https://doppelganger.md/og.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="text/plain" href="https://doppelganger.md/DOPPELGANGER.md" title="Example voice file">
+<link rel="alternate" type="text/plain" href="https://doppelganger.md/llms.txt" title="llms.txt">
+
+<link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://doppelganger.md/#website",
+      "url": "https://doppelganger.md/",
+      "name": "DOPPELGÄNGER.md",
+      "alternateName": [
+        "DOPPELGANGER.md",
+        "tone of voice file",
+        "brand voice file",
+        "voice map"
+      ],
+      "description": "An open Markdown convention for a voice file that teaches any AI how you write.",
+      "inLanguage": "en",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://doppelganger.md/faq#webpage",
+      "url": "https://doppelganger.md/faq",
+      "name": "FAQ · DOPPELGÄNGER.md",
+      "description": "Answers on tone of voice aliases, AGENTS.md and BRAND.md, secrets, accuracy, licensing, and why DOPPELGANGER.md has no hosted loader.",
+      "isPartOf": {
+        "@id": "https://doppelganger.md/#website"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-18",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://doppelganger.md/faq#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://doppelganger.md/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": "https://doppelganger.md/faq"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://doppelganger.md/faq#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is this different from AGENTS.md?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AGENTS.md tells a coding agent how to work in a repo. DOPPELGÄNGER.md tells any model how you write. Keep both, and point AGENTS.md at the voice file when the agent writes user-facing copy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from BRAND.md?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BRAND.md and Brand Context Protocol cover strategy, voice, and visual identity. DOPPELGÄNGER.md is voice only. No logo rules, no palette, no layout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this a tone of voice (ToV) file?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. DOPPELGÄNGER.md is the open Markdown voice file for tone of voice. Load it by pasting, attaching, or @ mentioning it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this a voice map, voicemap, or voice.md?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same job. Prefer the filename DOPPELGANGER.md and this spec so tools know where to look."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Custom instructions, or write like me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Put the file in the chat. Paste it, attach it, or @ it. There is no hosted loader."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is there no hosted loader?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A hosted loader becomes an account, an API, and lock-in. The convention is the file. Paste it, attach it, or @ it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the file hold secrets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The spec forbids keys, passwords, tokens, and unpublished personal data. It also forbids invented facts, metrics, and clients."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I make the file accurate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use real writing you already sent or published rather than AI drafts. Scrub secrets and private third-party details. Keep three to seven short samples across registers. When replies stop sounding like you, refresh the samples and bump version and updated in Meta. The file does not expire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Person or company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Meta kind is person or organization. The sections are the same. An organization file speaks as the company."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which language?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spec 0.1 is English only. Meta language is a BCP 47 tag. Use en."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the license?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The spec, the example, and this site are public domain under CC0 1.0. Your own file can use another license. Name it in Meta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the canonical site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "https://doppelganger.md is live. The source lives at github.com/supervised-nl/doppelganger."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">DOPPELGÄNGER.md</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/structure">Structure</a></li>
+        <li><a href="/load">Load</a></li>
+        <li><a href="/example">Example</a></li>
+        <li><a href="/faq" aria-current="page">FAQ</a></li>
+        <li><a href="/spec">Spec</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <section class="hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-hidden="true">/</li><li aria-current="page">FAQ</li></ol></nav>
+      <h1><span class="h1-mark">FAQ</span>
+      <span class="h1-line h1-line--sm">Aliases, neighbours, and limits.</span></h1>
+      <p class="lede">What the file is, what it is not, and why there is nothing to sign up for.</p>
+      <p class="answer">DOPPELGÄNGER.md is the open Markdown voice file for tone of voice. People also call it a brand voice file, a voice map, or write-like-me instructions. It sits next to <code>AGENTS.md</code>, which tells a coding agent how to work in a repo, and it stays out of visual identity, which is what <code>BRAND.md</code> covers.</p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="questions">
+    <div class="wrap">
+      <h2 id="questions" class="vh">Questions</h2>
+      <div class="faq">
+        <details open>
+          <summary>How is this different from AGENTS.md?</summary>
+          <p><code>AGENTS.md</code> tells a coding agent how to work in a repo. DOPPELGÄNGER.md tells any model how you write. Keep both, and point <code>AGENTS.md</code> at the voice file when the agent writes user-facing copy.</p>
+        </details>
+        <details>
+          <summary>How is this different from BRAND.md?</summary>
+          <p><code>BRAND.md</code> and Brand Context Protocol cover strategy, voice, and visual identity. If you want a brand voice for writing only, use this file. DOPPELGÄNGER.md is voice only. No logo rules, no palette, no layout.</p>
+        </details>
+        <details>
+          <summary>Is this a tone of voice (ToV) file?</summary>
+          <p>Yes. DOPPELGÄNGER.md is the open Markdown voice file for tone of voice. Load it with paste, attach, or <code>@DOPPELGANGER.md</code>.</p>
+        </details>
+        <details>
+          <summary>Is this a voice map, voicemap, or voice.md?</summary>
+          <p>Same job. Prefer the filename <code>DOPPELGANGER.md</code> and this spec so tools know where to look.</p>
+        </details>
+        <details>
+          <summary>Custom instructions, or write like me?</summary>
+          <p>Put the file in the chat. Paste it, attach it, or <code>@</code> it. There is no hosted loader. See <a href="/load">Load</a>.</p>
+        </details>
+        <details>
+          <summary>Why is there no hosted loader?</summary>
+          <p>A hosted loader becomes an account, an API, and lock-in. The convention is the file. Paste it, attach it, or <code>@</code> it.</p>
+        </details>
+        <details>
+          <summary>Can the file hold secrets?</summary>
+          <p>No. The spec forbids keys, passwords, tokens, and unpublished personal data. It also forbids invented facts, metrics, and clients.</p>
+        </details>
+        <details>
+          <summary>How do I make the file accurate?</summary>
+          <ul><li>Prefer real writing you already sent or published, such as email, posts, your site, and blogs, over AI drafts.</li><li>Scrub secrets and private third-party details before pasting samples.</li><li>Keep three to seven short samples across registers. Quality beats volume.</li><li>When replies stop sounding like you, refresh the samples and bump Meta <code>version</code> and <code>updated</code>.</li><li>Re-run on a schedule only if that helps you. The file does not expire.</li></ul>
+        </details>
+        <details>
+          <summary>Person or company?</summary>
+          <p>Meta <code>kind</code> is <code>person</code> or <code>organization</code>. The sections are the same. An organization file speaks as the company.</p>
+        </details>
+        <details>
+          <summary>Which language?</summary>
+          <p>Spec 0.1 is English only. Meta <code>language</code> is a BCP 47 tag. Use <code>en</code>.</p>
+        </details>
+        <details>
+          <summary>What is the license?</summary>
+          <p>The spec, the example, and this site are public domain under CC0 1.0. Your own file can use another license. Name it in Meta.</p>
+        </details>
+        <details>
+          <summary>Where is the canonical site?</summary>
+          <p><code>https://doppelganger.md</code> is live. The source lives at <a href="https://github.com/supervised-nl/doppelganger" rel="noopener">github.com/supervised-nl/doppelganger</a>.</p>
+        </details>
+      </div>
+      <p class="note">Still missing something? Open an issue at <a href="https://github.com/supervised-nl/doppelganger" rel="noopener">github.com/supervised-nl/doppelganger</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <ul>
+      <li><a href="/structure">Structure</a></li>
+      <li><a href="/load">Load guide</a></li>
+      <li><a href="/example">Example</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/spec">Spec 0.1</a></li>
+      <li><a href="/DOPPELGANGER.md">DOPPELGANGER.md</a></li>
+      <li><a href="/llms.txt">llms.txt</a></li>
+      <li><a href="https://github.com/supervised-nl/doppelganger" rel="noopener">Source</a></li>
+    </ul>
+    <p>An open voice-file convention. Spec 0.1. Dedicated to the public domain under CC0 1.0.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

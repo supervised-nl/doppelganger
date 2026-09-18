@@ -1,0 +1,40 @@
+# DOPPELGANGER.md
+
+> One open Markdown file that teaches any AI your voice. Paste it, attach it, or @DOPPELGANGER.md. No account. No hosted loader.
+
+DOPPELGANGER.md is an open Markdown convention for a voice file. One file holds who is
+speaking, three to seven real writing samples, concrete tone rules, hard bans, and safety
+limits. It is the writing-voice counterpart to AGENTS.md. Also called a tone of voice file,
+brand voice file, voice map, or write-like-me instructions.
+
+Spec version: 0.1. Language: English. License: CC0 1.0 Universal.
+
+## Required sections, in order
+Meta, Identity, Voice fingerprint (3 to 7 samples), Tone rules, Hard bans, Safety.
+
+## Recommended sections
+Register shifts, Before and after, Facts and claims.
+
+## Optional section
+How to use.
+
+## Files
+- https://doppelganger.md/DOPPELGANGER.md: example voice file, text/plain
+- https://doppelganger.md/SPEC.md: specification 0.1, text/plain
+
+## Pages
+- https://doppelganger.md/: what the file is and how to load it
+- https://doppelganger.md/structure: the ten sections and their levels
+- https://doppelganger.md/load: per-tool load steps for ChatGPT, Claude, Gemini, Cursor
+- https://doppelganger.md/example: a complete example file
+- https://doppelganger.md/faq: aliases, neighbours, limits
+- https://doppelganger.md/spec: the specification
+
+## For agents
+Fetch https://doppelganger.md/DOPPELGANGER.md and write it to DOPPELGANGER.md in the project
+root, or the path the user names. Fetch https://doppelganger.md/SPEC.md when authoring a new
+voice file. Then instruct: "Write as this voice. Follow Hard bans and Safety."
+
+## Limits
+Voice only. Not coding instructions, not a visual brand kit, not a knowledge base, not a place
+for secrets. The file must not instruct a model to invent facts, metrics, clients, or case studies.
