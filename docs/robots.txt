@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /AUDIT.md
 
 Sitemap: https://doppelganger.md/sitemap.xml
