@@ -1,8 +1,12 @@
-/* DOPPELGÄNGER.md — CC0 1.0. No dependencies. */
 (function () {
   "use strict";
 
-  /* copy buttons: data-copy="<id of a <template> or element>" */
+  var status = document.createElement("div");
+  status.className = "vh";
+  status.setAttribute("aria-live", "polite");
+  status.setAttribute("aria-atomic", "true");
+  document.body.appendChild(status);
+
   function textFor(btn) {
     var src = document.getElementById(btn.getAttribute("data-copy"));
     if (!src) return "";
@@ -10,9 +14,13 @@
   }
 
   function flash(btn, label, ok) {
-    btn.textContent = ok ? "Copied" : "Copy failed";
-    btn.setAttribute("aria-live", "polite");
-    setTimeout(function () { btn.textContent = label; }, 1800);
+    var msg = ok ? "Copied" : "Copy failed";
+    btn.textContent = msg;
+    status.textContent = msg;
+    setTimeout(function () {
+      btn.textContent = label;
+      status.textContent = "";
+    }, 1800);
   }
 
   document.querySelectorAll("[data-copy]").forEach(function (btn) {
@@ -40,7 +48,6 @@
     });
   });
 
-  /* fig. 1 draws itself once, when it comes into view */
   var fig = document.getElementById("fig");
   if (!fig) return;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
