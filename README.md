@@ -6,7 +6,7 @@
 
 1. Put [DOPPELGANGER.md](DOPPELGANGER.md) in the project root, or in a distinct directory such as `clients/acme/DOPPELGANGER.md`. Do not invent extra top-level filenames for spec 0.1.
 2. Paste the file, attach it, or `@DOPPELGANGER.md`.
-3. Instruct the model: write as this voice. Follow Hard bans and Safety.
+3. Tell the model to write as this voice and to follow Hard bans and Safety.
 
 The committed [DOPPELGANGER.md](DOPPELGANGER.md) is a fictional format example. Author a real file against [SPEC.md](SPEC.md).
 
