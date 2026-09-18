@@ -29,4 +29,4 @@ Voice only. Not `AGENTS.md`, not a visual brand kit, not a knowledge base, and n
 
 ## Website
 
-Documentation lives at [doppelganger.md](https://doppelganger.md). Preview the static site with `python3 -m http.server 4173`.
+Documentation lives at [doppelganger.md](https://doppelganger.md). The site lives in `docs/`. Set the Cloudflare Pages Root directory to `docs`. Preview the static site with `python3 -m http.server 4173` from `docs/`.
