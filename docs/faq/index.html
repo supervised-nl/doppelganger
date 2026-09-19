@@ -140,7 +140,7 @@
           "name": "Can the file hold secrets?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. The spec forbids keys, passwords, tokens, and unpublished personal data. It also forbids invented facts, metrics, and clients."
+            "text": "No. The spec forbids keys, passwords, tokens, and unpublished personal data. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private. Committing the file to a public repository publishes the samples. The spec also forbids invented facts, metrics, and clients."
           }
         },
         {
@@ -148,7 +148,7 @@
           "name": "How do I make the file accurate?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Use real writing you already sent or published rather than AI drafts. Scrub secrets and private third-party details. Keep three to seven short samples across registers. When replies stop sounding like you, refresh the samples and bump version and updated in Meta. The file does not expire."
+            "text": "Use real writing you already sent or published rather than AI drafts. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private. Committing the file to a public repository publishes the samples. Keep three to seven short samples across registers. When replies stop sounding like you, refresh the samples and bump version and updated in Meta. The file does not expire."
           }
         },
         {
@@ -156,7 +156,7 @@
           "name": "Person or company?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Meta kind is person or organization. The sections are the same. An organization file speaks as the company."
+            "text": "Meta kind is person or organization. The sections are the same. An organization file speaks as the company. The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent."
           }
         },
         {
@@ -172,7 +172,7 @@
           "name": "What is the license?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The spec, the example, and this site are public domain under CC0 1.0. Your own file can use another license. Name it in Meta."
+            "text": "The spec and this site are public domain under CC0 1.0. The committed example in this repo is also CC0 because the repo is CC0. That is not a recommendation for a real voice file. Meta license is required. The author chooses the license. All rights reserved is a reasonable default. Voice files usually contain the subject's own copyrighted writing."
           }
         },
         {
@@ -273,15 +273,15 @@
         </details>
         <details>
           <summary>Can the file hold secrets?</summary>
-          <p>No. The spec forbids keys, passwords, tokens, and unpublished personal data. It also forbids invented facts, metrics, and clients.</p>
+          <p>No. The spec forbids keys, passwords, tokens, and unpublished personal data. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private. Committing the file to a public repository publishes the samples. The spec also forbids invented facts, metrics, and clients.</p>
         </details>
         <details id="accurate">
           <summary>How do I make the file accurate?</summary>
-          <ul><li>Prefer real writing you already sent or published, such as email, posts, your site, and blogs, over AI drafts.</li><li>Scrub secrets and private third-party details before pasting samples.</li><li>Keep three to seven short samples across registers. Quality beats volume.</li><li>When replies stop sounding like you, refresh the samples and bump Meta <code>version</code> and <code>updated</code>.</li><li>Re-run on a schedule only if that helps you. The file does not expire.</li></ul>
+          <ul><li>Prefer real writing you already sent or published, such as email, posts, your site, and blogs, over AI drafts.</li><li>Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details.</li><li>The voice file SHOULD stay private. Committing the file to a public repository publishes the samples.</li><li>Keep three to seven short samples across registers. Quality beats volume.</li><li>When replies stop sounding like you, refresh the samples and bump Meta <code>version</code> and <code>updated</code>.</li><li>Re-run on a schedule only if that helps you. The file does not expire.</li></ul>
         </details>
         <details>
           <summary>Person or company?</summary>
-          <p>Meta <code>kind</code> is <code>person</code> or <code>organization</code>. The sections are the same. An organization file speaks as the company.</p>
+          <p>Meta <code>kind</code> is <code>person</code> or <code>organization</code>. The sections are the same. An organization file speaks as the company. The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent.</p>
         </details>
         <details>
           <summary>Which language?</summary>
@@ -289,7 +289,7 @@
         </details>
         <details>
           <summary>What is the license?</summary>
-          <p>The spec, the example, and this site are public domain under CC0 1.0. Your own file can use another license. Name it in Meta.</p>
+          <p>The spec and this site are public domain under CC0 1.0. The committed example in this repo is also CC0 because the repo is CC0. That is not a recommendation for a real voice file. Meta <code>license</code> is required. The author chooses the license. <code>All rights reserved</code> is a reasonable default. Voice files usually contain the subject's own copyrighted writing.</p>
         </details>
         <details>
           <summary>How should a consumer treat the voice file?</summary>
