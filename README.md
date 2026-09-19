@@ -7,7 +7,6 @@
 1. Put [DOPPELGANGER.md](DOPPELGANGER.md) in the project root, or in a distinct directory such as `clients/acme/DOPPELGANGER.md`. Do not invent extra top-level filenames for spec 0.1.
 2. Paste the file, attach it, or `@DOPPELGANGER.md`.
 3. Tell the model to write as this voice and to follow Hard bans and Safety.
-
 The committed [DOPPELGANGER.md](DOPPELGANGER.md) is a fictional format example. Author a real file against [SPEC.md](SPEC.md).
 
 ## Spec
@@ -30,3 +29,4 @@ Voice only. Not `AGENTS.md`, not a visual brand kit, not a knowledge base, and n
 ## Website
 
 Documentation lives at [doppelganger.md](https://doppelganger.md). The site lives in `docs/`. Set the Cloudflare Pages Root directory to `docs`. Preview the static site with `python3 -m http.server 4173` from `docs/`.
+
