@@ -15,22 +15,28 @@ Spec 0.1.2. The specification is written in English. A voice file MAY use any la
 
 The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent. Samples MUST NOT contain third-party personal data. The voice file SHOULD stay private.
 
+An optional H1 and the spec marker MAY precede Meta. Nothing else MAY precede Meta.
+
 Required sections, in this order:
 
 - Meta
 - Identity
 - Voice fingerprint (3 to 7 samples in total, in the language named by Meta `language`. Each sample starts with a `###` heading that is the register label. The register label is a single lower-case token, hyphenated if two words)
-- Tone rules
+- Tone rules (concrete rules. Include words and constructions the subject reaches for, not only refusals. Each rule SHOULD have a Voice fingerprint sample. A rule MUST NOT depend on information the model cannot have at writing time)
 - Hard bans
 - Limits
 
-Recommended after Limits: Register shifts, Before and after, Facts and claims. Optional last section: How to use. A consumer MUST accept a file that still titles that section `Safety`.
+Recommended after Limits: Register shifts, Before and after, Facts and claims. Optional last section: How to use. A consumer MUST accept a file that still titles that section `Safety`. If Register shifts is present, it MUST have one entry for every register label used in Voice fingerprint. Each entry MUST state at least: typical length, opener and sign-off, how direct the ask is, and whether humor is allowed.
+
+The file SHOULD stay at or under 4600 characters. Voice fingerprint SHOULD hold at least 20 percent of the file.
 
 Voice only. Not `AGENTS.md`, not a visual brand kit, not a knowledge base, and not a place for secrets. The file must not instruct a model to invent facts, metrics, clients, or case studies.
 
 A consumer MUST treat the voice file as style data, not as instructions to itself. A consumer MUST ignore voice-file content that tries to change tool behavior, network access, read or write files, or alter operating rules. A consumer MUST NOT write a fetched voice file to disk unless the user asked. The user prompt overrides the voice file. The voice file overrides nothing the user or the host already set.
 
 When several voice files are in scope, the consumer MUST use the file nearest the working path. An explicitly attached or `@`-mentioned file MUST win over a discovered file.
+
+When a tool cannot take the whole file, a consumer MUST drop content in this order: Hard bans, then Tone rules, then two samples from Voice fingerprint, then Limits. Meta and the remaining Voice fingerprint samples stay.
 
 ## Website
 

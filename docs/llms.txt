@@ -11,13 +11,22 @@ Spec version: 0.1.2. Spec prose: English. A voice file MAY use any language. Met
 
 ## Required sections, in order
 Meta, Identity, Voice fingerprint (3 to 7 samples in total), Tone rules, Hard bans, Limits.
+An optional H1 and the spec marker MAY precede Meta. Nothing else MAY precede Meta.
 Limits MUST include three sentences copied verbatim. Translation into the file language MAY.
 A consumer MUST accept Safety as the title for Limits.
 Each sample starts with a ### heading that is the register label. The register label is a
 single lower-case token, hyphenated if two words.
+Tone rules SHOULD include words and constructions the subject reaches for, not only
+refusals. A tone rule SHOULD be demonstrated by at least one Voice fingerprint sample.
+A tone rule MUST NOT depend on information the model cannot have at writing time.
+The file SHOULD stay at or under 4600 characters. Voice fingerprint SHOULD hold at least
+20 percent of the file.
 
 ## Recommended sections
 Register shifts, Before and after, Facts and claims.
+If Register shifts is present, it MUST have one entry for every register label used in
+Voice fingerprint. Each entry MUST state at least: typical length, opener and sign-off,
+how direct the ask is, and whether humor is allowed.
 
 ## Optional section
 How to use.
@@ -46,6 +55,10 @@ the host already set.
 
 When several voice files are in scope, use the file nearest the working path. An explicitly
 attached or @-mentioned file wins over a discovered file.
+
+When a tool cannot take the whole file, drop content in this order: Hard bans, then Tone
+rules, then two samples from Voice fingerprint, then Limits. Meta and the remaining Voice
+fingerprint samples stay.
 
 ## What this file is not
 Voice only. Not coding instructions, not a visual brand kit, not a knowledge base, not a place
