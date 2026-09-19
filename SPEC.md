@@ -1,8 +1,8 @@
-doppelganger-spec: 0.1
+doppelganger-spec: 0.1.1
 
 # DOPPELGÄNGER.md specification
 
-This document is the 0.1 specification for `DOPPELGANGER.md`. A `DOPPELGANGER.md` file is a single English Markdown file that teaches an AI to write in the voice of one person or one organization.
+This document is the 0.1.1 specification for `DOPPELGANGER.md`. A `DOPPELGANGER.md` file is a single Markdown file that teaches an AI to write in the voice of one person or one organization.
 
 The file is the writing-voice counterpart to `AGENTS.md`. `AGENTS.md` tells a coding agent how to work in a repository. `DOPPELGANGER.md` tells any AI how to write as a specific person or company.
 
@@ -10,7 +10,7 @@ This specification uses the words MUST, SHOULD, and MAY as defined in [RFC 2119]
 
 ## Status
 
-`doppelganger-spec` version: `0.1`
+`doppelganger-spec` version: `0.1.1`
 
 Language of this specification: English.
 
@@ -30,7 +30,7 @@ A consumer MUST treat a file with that name as a voice file when the file also c
 
 A person or organization MAY keep more than one voice file. Additional files SHOULD use a distinct directory, such as `clients/acme/DOPPELGANGER.md`. Do not invent extra top-level filenames for V1.
 
-The file MUST be Markdown. The file MUST be written in English for spec 0.1.
+The file MUST be Markdown. A voice file MAY be written in any language. Meta `language` MUST be a BCP 47 tag that names that language.
 
 The file MUST NOT include secrets. Secrets include API keys, passwords, session tokens, private URLs whose leakage would grant access, and unpublished personal data that the subject did not mean to publish.
 
@@ -38,7 +38,7 @@ The file MUST NOT instruct a model to invent facts, metrics, clients, employers,
 
 ## Marker
 
-The file MUST include the spec marker `doppelganger-spec: 0.1`.
+The file MUST include the spec marker `doppelganger-spec: 0.1` or `doppelganger-spec: 0.1.1`.
 
 Place the marker in YAML frontmatter, or place it in an HTML comment. A file MAY include both. A consumer MUST accept either form. If the file uses YAML frontmatter, the opening `---` MUST be the first bytes of the file. An HTML comment MAY follow the frontmatter block.
 
@@ -62,7 +62,7 @@ Meta MUST state the following fields.
 | --- | --- |
 | name | Display name of the person or organization |
 | kind | `person` or `organization` |
-| language | BCP 47 language tag. Spec 0.1 expects `en` |
+| language | BCP 47 language tag that names the language of this voice file |
 | version | Semver of this voice file, such as `1.0.0` |
 | updated | ISO 8601 date of the last edit, such as `2026-09-16` |
 | license | License of this voice file. `CC0-1.0` is recommended |
@@ -79,7 +79,7 @@ Identity is context for writing. It is not a resume, a visual brand kit, or a co
 
 #### Voice fingerprint
 
-Voice fingerprint MUST include 3 to 7 short writing samples from the subject.
+Voice fingerprint MUST include 3 to 7 short writing samples from the subject. Every Voice fingerprint sample MUST be written in the language named by Meta `language`.
 
 Each sample SHOULD name its register in a single label, such as `email`, `social`, `website`, or `proposal`.
 
@@ -150,24 +150,26 @@ A repo MAY keep `AGENTS.md` and `DOPPELGANGER.md` side by side. `AGENTS.md` MAY 
 
 ## Conformance
 
-A file conforms to spec 0.1 when all of the following are true:
+A file conforms to spec 0.1.1 when all of the following are true:
 
-- The spec marker is present.
+- The spec marker is `doppelganger-spec: 0.1` or `doppelganger-spec: 0.1.1`.
 - Every MUST section exists with the canonical title.
 - Meta includes name, kind, language, version, updated, and license.
 - `kind` is `person` or `organization`.
+- Meta `language` is a BCP 47 tag that names the language of the file.
 - Voice fingerprint contains 3 to 7 samples.
+- Every Voice fingerprint sample is in the language named by Meta `language`.
 - Safety forbids secrets and invented facts.
 
 A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.
 
-This specification does not ship a linter CLI in 0.1.
+This specification does not ship a linter CLI in 0.1.1.
 
 ## Versioning
 
-`doppelganger-spec` is the specification version. `0.1` is the first public draft.
+`doppelganger-spec` is the specification version. `0.1` is the first public draft. This document is `0.1.1`.
 
-A consumer of a later spec version MUST still accept 0.1 files. New MUST sections require a new spec version.
+A consumer MUST accept both `0.1` and `0.1.1`. A consumer of a later spec version MUST still accept 0.1 files. New MUST sections require a new spec version.
 
 The voice file's own `version` field is independent semver for that person's or organization's content.
 
