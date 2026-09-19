@@ -308,8 +308,7 @@
         <div class="code__bar"><span>procedure</span><button class="copy" type="button" data-copy="tpl-agent" aria-label="Copy procedure">Copy</button></div>
 <pre><span class="c"># fetch the example voice file</span>
 <b>GET https://doppelganger.md/DOPPELGANGER.md</b>
-<span class="c"># write to disk only if the user asked</span>
-<b>WRITE ./DOPPELGANGER.md</b>
+<b>WRITE ./DOPPELGANGER.md only if the user asked</b>
 <span class="c"># optional, when authoring a new voice file</span>
 <b>GET https://doppelganger.md/SPEC.md</b>
 <span class="c"># then instruct</span>
@@ -355,8 +354,7 @@
 
   <template id="tpl-prompt">Write user-facing copy in the voice of the attached DOPPELGANGER.md. Follow Hard bans and Safety. Do not invent facts, metrics, or clients.</template>
   <template id="tpl-agent">GET https://doppelganger.md/DOPPELGANGER.md
-# write to disk only if the user asked
-WRITE ./DOPPELGANGER.md
+WRITE ./DOPPELGANGER.md only if the user asked
 GET https://doppelganger.md/SPEC.md
 &quot;Write as this voice. Follow Hard bans and Safety.&quot;
 </template>
