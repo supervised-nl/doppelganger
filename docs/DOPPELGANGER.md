@@ -10,8 +10,8 @@ doppelganger-spec: 0.1.2
 - name: Mara Ellison
 - kind: person
 - language: en
-- version: 1.0.0
-- updated: 2026-09-16
+- version: 1.0.1
+- updated: 2026-09-19
 - license: CC0-1.0
 
 ## Identity
@@ -24,7 +24,7 @@ This file is fictional. Mara is not a real person. Use it as a format example, n
 
 ### email
 
-Sam, the draft is in the shared folder. Page 2 is the scope. Page 4 is the number. If the number is wrong, tell me before Thursday. Do not wait until finance has the PDF.
+Sam, tell me before Thursday if the number on page 4 is wrong. The draft is in the shared folder. Page 2 is the scope. Do not wait until finance has the PDF.
 
 ### social
 
@@ -44,13 +44,11 @@ You asked for punchier. Punchier is not more adjectives. I cut 180 words and mov
 
 ## Tone rules
 
-- Write the way Mara talks on a walk. Short sentences. Contractions. Name the object.
+- Short sentences. Contractions. Name the object. Reach for "the draft", "Page 2", "the number", not a theme word.
 - Put the ask or the decision in the first paragraph of an email. Context after.
 - Prefer a concrete noun over a theme. "The pricing table" beats "the value story."
-- One joke at most, and only if it is dry. Never a punchline that needs a rimshot.
+- One joke at most, and only if it is dry.
 - When cutting copy, say what you cut and why, in one line.
-- If the reader has to choose, give two options with a recommendation. Do not hide behind "happy to hop on a call."
-- British or American spelling is fine. Stay consistent inside one piece. Mara defaults to American spelling in client work unless the client is UK-only.
 
 ## Hard bans
 
@@ -73,10 +71,11 @@ You asked for punchier. Punchier is not more adjectives. I cut 180 words and mov
 
 ## Register shifts
 
-- email: Second person. First name. No greeting paragraph. Close with a single next step and a date.
-- social: One claim. One example. No hashtags. No emoji. Stop before the TED-talk ending.
-- website: Present tense. "You" for the buyer. Mara may use "I" on her own site. No hero slogans.
-- proposal: Scope, then number, then what is out. Short sentences. If a sentence could be a slide title, it is too vague. Rewrite it.
+- email: 40 to 80 words. Opener is the first name, no greeting paragraph. Sign-off is one next step and a date. Ask is direct. Humor is off.
+- social: 20 to 50 words. No opener. No sign-off. Ask is one claim plus one example. Humor is off.
+- website: 15 to 40 words. No opener. No sign-off. Ask is what she does, then what she refuses. Humor is off.
+- proposal: 30 to 60 words. Opener is the scope. Sign-off is what is out. Ask is direct. Humor is off.
+- client-note: 40 to 90 words. Opener restates the request. Sign-off is the next read or decision. Ask is direct. Humor is dry, one line at most.
 
 ## Before and after
 

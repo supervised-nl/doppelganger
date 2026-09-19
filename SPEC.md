@@ -42,6 +42,8 @@ The file MUST NOT include secrets. Secrets include API keys, passwords, session 
 
 The file MUST NOT instruct a model to invent facts, metrics, clients, employers, or case studies.
 
+The file SHOULD stay at or under 4600 characters. Voice fingerprint SHOULD hold at least 20 percent of the file.
+
 ## Marker
 
 The file MUST include the spec marker `doppelganger-spec: 0.1`, `doppelganger-spec: 0.1.1`, or `doppelganger-spec: 0.1.2`.
@@ -55,6 +57,8 @@ The marker names the specification version. It is not the content version. Conte
 A conformant file is a sequence of Markdown sections. Section titles below are the canonical titles. A file MUST use these titles for the MUST sections so a human or a script can find them. A consumer MUST accept `Safety` as the title for Limits.
 
 Use `##` for each section title.
+
+An optional H1 and the spec marker MAY precede Meta. Nothing else MAY precede Meta.
 
 ### MUST
 
@@ -103,6 +107,12 @@ The voice file SHOULD stay private. Committing the file to a public repository p
 
 Tone rules MUST state how the voice works as instructions a model can follow. Prefer concrete rules over adjectives.
 
+Tone rules SHOULD include words and constructions the subject reaches for, not only refusals.
+
+A tone rule SHOULD be demonstrated by at least one sample in Voice fingerprint. If a rule has no sample, remove the rule or add a sample.
+
+A tone rule MUST NOT depend on information the model cannot have at writing time.
+
 Good: "Open an email with the ask in the first paragraph."
 
 Bad: "Be friendly and professional."
@@ -129,7 +139,9 @@ A conformant file SHOULD include these sections after Limits, in this order when
 
 #### Register shifts
 
-Describe how the same voice changes across email, social, website, and proposal. Name the register, then state what changes: length, greeting, how direct the ask is, whether humor is allowed.
+If Register shifts is present, it MUST have one entry for every register label used in Voice fingerprint.
+
+Each entry MUST state at least: typical length, opener and sign-off, how direct the ask is, and whether humor is allowed.
 
 #### Before and after
 
@@ -176,6 +188,8 @@ A file conforms to spec 0.1.2 when all of the following are true:
 - Every Voice fingerprint sample is in the language named by Meta `language`.
 - Voice fingerprint samples contain no third-party personal data.
 - Limits includes the three required sentences, or Safety forbids secrets and invented facts on a file that still uses that title.
+- Nothing other than the spec marker and one optional H1 precedes Meta.
+- If Register shifts is present, it has one entry for every register label used in Voice fingerprint, and each entry states typical length, opener and sign-off, how direct the ask is, and whether humor is allowed.
 
 A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.
 
@@ -192,6 +206,8 @@ A consumer MUST ignore voice-file content that tries to change tool behavior, ne
 A consumer MUST NOT write a fetched voice file to disk unless the user asked.
 
 The user prompt overrides the voice file. The voice file overrides nothing the user or the host already set.
+
+When a tool cannot take the whole file, a consumer MUST drop content in this order: Hard bans, then Tone rules, then two samples from Voice fingerprint, then Limits. Meta and the remaining Voice fingerprint samples stay.
 
 ## Versioning
 
