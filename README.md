@@ -24,7 +24,7 @@ Required sections, in this order:
 - Hard bans
 - Limits
 
-Recommended after Limits: Register shifts, Before and after, Facts and claims. Optional last section: How to use.
+Recommended after Limits: Register shifts, Before and after, Facts and claims. Optional last section: How to use. A consumer MUST accept a file that still titles that section `Safety`.
 
 Voice only. Not `AGENTS.md`, not a visual brand kit, not a knowledge base, and not a place for secrets. The file must not instruct a model to invent facts, metrics, clients, or case studies.
 
