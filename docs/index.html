@@ -243,7 +243,7 @@
             <li class="fig__row" data-i="0"><div class="fig__cell" aria-hidden="true"><i data-w="72"></i><i data-w="44"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#meta">Meta</a></h3><p>name, kind, language, version, updated, license</p></div></li>
             <li class="fig__row" data-i="1"><div class="fig__cell" aria-hidden="true"><i data-w="86"></i><i data-w="57"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#identity">Identity</a></h3><p>who is speaking, and what they do not do</p></div></li>
             <li class="fig__row" data-i="2"><div class="fig__cell" aria-hidden="true"><i data-w="93"></i><i data-w="78"></i><i data-w="61"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#voice-fingerprint">Voice fingerprint</a></h3><p>three to seven samples of writing you already sent or published</p></div></li>
-            <li class="fig__row" data-i="3"><div class="fig__cell" aria-hidden="true"><i data-w="66"></i><i data-w="81"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#tone-rules">Tone rules</a></h3><p>concrete instructions, and words the subject reaches for</p></div></li>
+            <li class="fig__row" data-i="3"><div class="fig__cell" aria-hidden="true"><i data-w="66"></i><i data-w="81"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#tone-rules">Tone rules</a></h3><p>concrete instructions, words and constructions the subject reaches for. Each rule SHOULD have a Voice fingerprint sample. A rule MUST NOT depend on information the model cannot have at writing time</p></div></li>
             <li class="fig__row" data-i="4"><div class="fig__cell" aria-hidden="true"><i data-w="49"></i><i data-w="70"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#hard-bans">Hard bans</a></h3><p>words, phrases, and moves the model must not use</p></div></li>
             <li class="fig__row" data-i="5"><div class="fig__cell" aria-hidden="true"><i data-w="84"></i><i data-w="38"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#limits">Limits</a></h3><p>three sentences copied verbatim. No secrets, and no invented facts</p></div></li>
           </ol>
@@ -251,7 +251,7 @@
         <div class="fig__group fig__group--should">
           <div class="fig__bracket"><span>SHOULD × 3</span><i aria-hidden="true"></i></div>
           <ol class="fig__rows">
-            <li class="fig__row" data-i="6"><div class="fig__cell" aria-hidden="true"><i data-w="59"></i><i data-w="74"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#register-shifts">Register shifts</a></h3><p>one entry per Voice fingerprint label, with length, opener, sign-off, ask, and humor</p></div></li>
+            <li class="fig__row" data-i="6"><div class="fig__cell" aria-hidden="true"><i data-w="59"></i><i data-w="74"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#register-shifts">Register shifts</a></h3><p>one entry per Voice fingerprint register label. Typical length, opener and sign-off, how direct the ask is, and whether humor is allowed</p></div></li>
             <li class="fig__row" data-i="7"><div class="fig__cell" aria-hidden="true"><i data-w="80"></i><i data-w="52"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#before-and-after">Before and after</a></h3><p>generic AI copy rewritten in this voice</p></div></li>
             <li class="fig__row" data-i="8"><div class="fig__cell" aria-hidden="true"><i data-w="68"></i><i data-w="45"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#facts-and-claims">Facts and claims</a></h3><p>facts the model may treat as true</p></div></li>
           </ol>
@@ -294,7 +294,7 @@
         <div><dt>Gemini</dt><dd>Attach as a knowledge file in a Gem, or <code>@</code> it in the CLI.</dd></div>
         <div><dt>Cursor</dt><dd>Keep it in the repo and attach with <code>@DOPPELGANGER.md</code>.</dd></div>
       </dl>
-      <p class="note">The file SHOULD stay at or under 4600 characters. If a tool cannot take the whole file, drop Hard bans, then Tone rules, then two Voice fingerprint samples, then Limits. Keep Meta and the remaining samples. Full instructions on <a href="/load">Load</a>.</p>
+      <p class="note">The file SHOULD stay at or under 4600 characters. Voice fingerprint SHOULD hold at least 20 percent of the file. If a tool cannot take the whole file, drop Hard bans, then Tone rules, then two Voice fingerprint samples, then Limits. Keep Meta and the remaining samples. Full instructions on <a href="/load">Load</a>.</p>
     </div>
   </section>
 
