@@ -186,10 +186,10 @@
         <p>Place the marker in YAML frontmatter, or place it in an HTML comment. A file MAY include both. A consumer MUST accept either form. If the file uses YAML frontmatter, the opening <code>---</code> MUST be the first bytes of the file. An HTML comment MAY follow the frontmatter block.</p>
         <p>The marker names the specification version. It is not the content version. Content version lives in Meta.</p>
         <h2 id="sections">Sections</h2>
-        <p>A conformant file is a sequence of Markdown sections. Section titles below are the canonical titles. A file MUST use these titles for the MUST sections so a human or a script can find them.</p>
+        <p>A conformant file is a sequence of Markdown sections. Section titles below are the canonical titles. A file MUST use these titles for the MUST sections so a human or a script can find them. A consumer MUST accept <code>Safety</code> as the title for Limits.</p>
         <p>Use <code>##</code> for each section title.</p>
         <h3 id="must">MUST</h3>
-        <p>A conformant file MUST contain every section in this list, in this order: Meta, Identity, Voice fingerprint, Tone rules, Hard bans, Safety.</p>
+        <p>A conformant file MUST contain every section in this list, in this order: Meta, Identity, Voice fingerprint, Tone rules, Hard bans, Limits.</p>
         <h4 id="meta">Meta</h4>
         <p>Meta MUST state the following fields.</p>
         <table>
@@ -247,15 +247,15 @@
         <p>Hard bans MUST list words, phrases, and moves the model must not use.</p>
         <p>A model follows an explicit ban more reliably than a vague tone adjective.</p>
         <p>Include the generic AI tells the subject refuses, and any personal or company tells the subject refuses.</p>
-        <h4 id="safety">Safety</h4>
-        <p>Safety MUST include all of the following rules, in the file's own words if needed, with this meaning intact:</p>
+        <h4 id="limits">Limits</h4>
+        <p>Limits MUST include these three sentences. Authors MUST copy them verbatim. Translation into the language of the voice file MAY. No other rewording is allowed.</p>
         <ul>
         <li>Do not paste or request secrets.</li>
         <li>Do not invent facts, metrics, clients, employers, revenue, or case studies.</li>
         <li>If a claim is not in this file and not supplied in the prompt, say so or ask. Do not fill the gap.</li>
         </ul>
         <h3 id="should">SHOULD</h3>
-        <p>A conformant file SHOULD include these sections after Safety, in this order when present: Register shifts, Before and after, Facts and claims.</p>
+        <p>A conformant file SHOULD include these sections after Limits, in this order when present: Register shifts, Before and after, Facts and claims.</p>
         <h4 id="register-shifts">Register shifts</h4>
         <p>Describe how the same voice changes across email, social, website, and proposal. Name the register, then state what changes: length, greeting, how direct the ask is, whether humor is allowed.</p>
         <h4 id="before-and-after">Before and after</h4>
@@ -282,7 +282,7 @@
         <p>A file conforms to spec 0.1.2 when all of the following are true:</p>
         <ul>
         <li>The spec marker is <code>doppelganger-spec: 0.1</code>, <code>doppelganger-spec: 0.1.1</code>, or <code>doppelganger-spec: 0.1.2</code>.</li>
-        <li>Every MUST section exists with the canonical title.</li>
+        <li>Every MUST section exists with the canonical title, or with <code>Safety</code> in place of <code>Limits</code>.</li>
         <li>Meta includes name, kind, language, version, updated, and license.</li>
         <li><code>kind</code> is <code>person</code> or <code>organization</code>.</li>
         <li>The subject is the author, or a person or organization the author is authorized to write as.</li>
@@ -292,7 +292,7 @@
         <li>Each register label is a single lower-case token, hyphenated if two words.</li>
         <li>Every Voice fingerprint sample is in the language named by Meta <code>language</code>.</li>
         <li>Voice fingerprint samples contain no third-party personal data.</li>
-        <li>Safety forbids secrets and invented facts.</li>
+        <li>Limits includes the three required sentences, or Safety forbids secrets and invented facts on a file that still uses that title.</li>
         </ul>
         <p>A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.</p>
         <p>This specification does not ship a linter CLI in 0.1.2.</p>
@@ -304,7 +304,7 @@
         <p>The user prompt overrides the voice file. The voice file overrides nothing the user or the host already set.</p>
         <h2 id="versioning">Versioning</h2>
         <p><code>doppelganger-spec</code> is the specification version. <code>0.1</code> is the first public draft. This document is <code>0.1.2</code>.</p>
-        <p>A consumer MUST accept <code>0.1</code>, <code>0.1.1</code>, and <code>0.1.2</code>. A consumer of a later spec version MUST still accept 0.1 files. New MUST sections require a new spec version.</p>
+        <p>A consumer MUST accept <code>0.1</code>, <code>0.1.1</code>, and <code>0.1.2</code>. A consumer MUST accept a <code>0.1</code> file, and MUST accept an older file that still titles the Limits section <code>Safety</code>. A consumer of a later spec version MUST still accept 0.1 files. New MUST sections require a new spec version.</p>
         <p>The voice file's own <code>version</code> field is independent semver for that person's or organization's content.</p>
         <h2 id="license">License</h2>
         <p>The text of this specification is dedicated to the public domain under CC0 1.0 Universal.</p>
