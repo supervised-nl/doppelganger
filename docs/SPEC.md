@@ -193,7 +193,7 @@ A file conforms to spec 0.1.2 when all of the following are true:
 
 A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.
 
-This specification does not ship a linter CLI in 0.1.2.
+This specification ships a linter CLI at `tools/lint.mjs`. Run `node tools/lint.mjs <path>`. A non-zero exit means one or more errors. Warnings print separately and do not fail the process.
 
 ## Consumer obligations
 

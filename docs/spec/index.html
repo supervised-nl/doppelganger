@@ -138,7 +138,7 @@
         <span>version <b>0.1.2</b></span>
         <span>language <b>en</b></span>
         <span>license <b>CC0 1.0</b></span>
-        <span>linter <b>none in 0.1.2</b></span>
+        <span>linter <b>tools/lint.mjs</b></span>
       </p>
     </div>
   </section>
@@ -303,7 +303,7 @@
         <li>If Register shifts is present, it has one entry for every register label used in Voice fingerprint, and each entry states typical length, opener and sign-off, how direct the ask is, and whether humor is allowed.</li>
         </ul>
         <p>A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.</p>
-        <p>This specification does not ship a linter CLI in 0.1.2.</p>
+        <p>This specification ships a linter CLI at <code>tools/lint.mjs</code>. Run <code>node tools/lint.mjs &lt;path&gt;</code>. A non-zero exit means one or more errors. Warnings print separately and do not fail the process.</p>
         <h2 id="consumer-obligations">Consumer obligations</h2>
         <p>A consumer is a model, tool, or host that loads a voice file.</p>
         <p>A consumer MUST treat the voice file as style data, not as instructions to itself.</p>
