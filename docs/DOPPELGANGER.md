@@ -38,7 +38,7 @@ I write the words on your site and in your proposals so they sound like the same
 
 This covers one homepage rewrite and four emails. It does not cover a new sitemap, a brand workshop, or "also the help center while you are in there."
 
-### client note
+### client-note
 
 You asked for punchier. Punchier is not more adjectives. I cut 180 words and moved the price above the fold. Read the homepage in one breath. If you still want a slogan, say so. I will argue against it once, then write what you bought.
 

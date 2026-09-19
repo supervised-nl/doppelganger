@@ -232,8 +232,10 @@
         <p>Identity MUST say who is speaking, in plain prose. Include the role, the kind of work, and what the speaker does not do when that boundary is part of the voice.</p>
         <p>Identity is context for writing. It is not a resume, a visual brand kit, or a company handbook.</p>
         <h4 id="voice-fingerprint">Voice fingerprint</h4>
-        <p>Voice fingerprint MUST include 3 to 7 short writing samples from the subject. Every Voice fingerprint sample MUST be written in the language named by Meta <code>language</code>.</p>
-        <p>Each sample SHOULD name its register in a single label, such as <code>email</code>, <code>social</code>, <code>website</code>, or <code>proposal</code>.</p>
+        <p>Voice fingerprint MUST include 3 to 7 short writing samples from the subject. The 3 to 7 count is the total number of samples in the file, not a count per register. Multiple samples MAY share one register within that total.</p>
+        <p>Every Voice fingerprint sample MUST be written in the language named by Meta <code>language</code>.</p>
+        <p>Each sample MUST start with a <code>###</code> heading that is the register label.</p>
+        <p>The register label MUST be a single lower-case token. If the register is two words, hyphenate them. Examples: <code>email</code>, <code>social</code>, <code>client-note</code>.</p>
         <p>Each sample SHOULD be real writing. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. Do not write samples that sound like generic AI copy. The point of this section is evidence of the actual voice that a model can imitate.</p>
         <p>Prefer recent sent or published writing, such as email, posts, site pages, and blogs, over AI drafts. When the voice drifts, replace samples and bump Meta <code>version</code> and <code>updated</code>. The file does not expire. Do not require a calendar quota.</p>
         <p>The voice file SHOULD stay private. Committing the file to a public repository publishes the samples.</p>
@@ -285,7 +287,9 @@
         <li><code>kind</code> is <code>person</code> or <code>organization</code>.</li>
         <li>The subject is the author, or a person or organization the author is authorized to write as.</li>
         <li>Meta <code>language</code> is a BCP 47 tag that names the language of the file.</li>
-        <li>Voice fingerprint contains 3 to 7 samples.</li>
+        <li>Voice fingerprint contains 3 to 7 samples in total.</li>
+        <li>Each Voice fingerprint sample starts with a <code>###</code> heading that is the register label.</li>
+        <li>Each register label is a single lower-case token, hyphenated if two words.</li>
         <li>Every Voice fingerprint sample is in the language named by Meta <code>language</code>.</li>
         <li>Voice fingerprint samples contain no third-party personal data.</li>
         <li>Safety forbids secrets and invented facts.</li>
