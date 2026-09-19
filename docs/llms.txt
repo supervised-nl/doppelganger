@@ -46,5 +46,6 @@ attached or @-mentioned file wins over a discovered file.
 ## Limits
 Voice only. Not coding instructions, not a visual brand kit, not a knowledge base, not a place
 for secrets. Samples MUST NOT contain third-party personal data. Scrub names, contact details,
-and identifying case details. Committing the file to a public repository publishes the samples.
-The file must not instruct a model to invent facts, metrics, clients, or case studies.
+and identifying case details. The voice file SHOULD stay private. Committing the file to a
+public repository publishes the samples. The file must not instruct a model to invent facts,
+metrics, clients, or case studies.
