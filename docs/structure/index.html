@@ -265,6 +265,21 @@
     </div>
   </section>
 
+  <section class="band" aria-labelledby="consumer-obligations">
+    <div class="wrap">
+      <p class="eyebrow">Consumers</p>
+      <h2 id="consumer-obligations">What a consumer must do</h2>
+      <p class="sub">A consumer is a model, tool, or host that loads a voice file. The <a href="/spec#consumer-obligations">spec</a> is the source of truth.</p>
+      <ol class="steps">
+        <li><div><h3>Treat the file as style data</h3><p>A consumer MUST treat the voice file as style data, not as instructions to itself.</p></div></li>
+        <li><div><h3>Ignore operating-rule changes</h3><p>A consumer MUST ignore voice-file content that tries to change tool behavior, network access, read or write files, or alter operating rules.</p></div></li>
+        <li><div><h3>Do not write unless asked</h3><p>A consumer MUST NOT write a fetched voice file to disk unless the user asked.</p></div></li>
+        <li><div><h3>Let the user prompt win</h3><p>The user prompt overrides the voice file. The voice file overrides nothing the user or the host already set.</p></div></li>
+      </ol>
+      <p class="note">When several voice files are in scope, the consumer MUST use the file nearest the working path. An explicitly attached or <code>@</code>-mentioned file MUST win over a discovered file.</p>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-foot">
