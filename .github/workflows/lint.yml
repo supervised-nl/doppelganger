@@ -1,0 +1,29 @@
+name: lint
+
+on:
+  push:
+    paths:
+      - DOPPELGANGER.md
+      - docs/DOPPELGANGER.md
+      - DOPPELGANGER.template.md
+      - tools/lint.mjs
+      - .github/workflows/lint.yml
+  pull_request:
+    paths:
+      - DOPPELGANGER.md
+      - docs/DOPPELGANGER.md
+      - DOPPELGANGER.template.md
+      - tools/lint.mjs
+      - .github/workflows/lint.yml
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint example
+        run: node tools/lint.mjs DOPPELGANGER.md
+      - name: Lint site example
+        run: node tools/lint.mjs docs/DOPPELGANGER.md
+      - name: Lint template
+        run: node tools/lint.mjs DOPPELGANGER.template.md
