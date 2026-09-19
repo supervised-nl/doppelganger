@@ -34,6 +34,10 @@ When several voice files are in scope, the consumer MUST use the file nearest th
 
 The file MUST be Markdown. A voice file MAY be written in any language. Meta `language` MUST be a BCP 47 tag that names that language.
 
+The subject MUST be the author, or a person or organization the author is authorized to write as.
+
+A file MUST NOT be published for a living third party without that person's or organization's consent.
+
 The file MUST NOT include secrets. Secrets include API keys, passwords, session tokens, private URLs whose leakage would grant access, and unpublished personal data that the subject did not mean to publish.
 
 The file MUST NOT instruct a model to invent facts, metrics, clients, employers, or case studies.
@@ -67,7 +71,7 @@ Meta MUST state the following fields.
 | language | BCP 47 language tag that names the language of this voice file |
 | version | Semver of this voice file, such as `1.0.0` |
 | updated | ISO 8601 date of the last edit, such as `2026-09-16` |
-| license | License of this voice file. `CC0-1.0` is recommended |
+| license | License of this voice file. The author chooses the license. `All rights reserved` is a reasonable default. Voice files usually contain the subject's own copyrighted writing. |
 
 Write Meta as a list or a small table. Either form is valid.
 
@@ -85,9 +89,11 @@ Voice fingerprint MUST include 3 to 7 short writing samples from the subject. Ev
 
 Each sample SHOULD name its register in a single label, such as `email`, `social`, `website`, or `proposal`.
 
-Each sample SHOULD be real writing, lightly edited to remove secrets and third-party private data. Do not write samples that sound like generic AI copy. The point of this section is evidence of the actual voice that a model can imitate.
+Each sample SHOULD be real writing. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. Do not write samples that sound like generic AI copy. The point of this section is evidence of the actual voice that a model can imitate.
 
 Prefer recent sent or published writing, such as email, posts, site pages, and blogs, over AI drafts. When the voice drifts, replace samples and bump Meta `version` and `updated`. The file does not expire. Do not require a calendar quota.
+
+The voice file SHOULD stay private. Committing the file to a public repository publishes the samples.
 
 #### Tone rules
 
@@ -158,9 +164,11 @@ A file conforms to spec 0.1.2 when all of the following are true:
 - Every MUST section exists with the canonical title.
 - Meta includes name, kind, language, version, updated, and license.
 - `kind` is `person` or `organization`.
+- The subject is the author, or a person or organization the author is authorized to write as.
 - Meta `language` is a BCP 47 tag that names the language of the file.
 - Voice fingerprint contains 3 to 7 samples.
 - Every Voice fingerprint sample is in the language named by Meta `language`.
+- Voice fingerprint samples contain no third-party personal data.
 - Safety forbids secrets and invented facts.
 
 A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.
