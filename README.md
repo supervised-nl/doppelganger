@@ -1,23 +1,23 @@
 # DOPPELGÄNGER.md
 
-`DOPPELGANGER.md` is an open Markdown voice file for any AI. One English file teaches a model to write as one person or one organization. It is the writing-voice counterpart to `AGENTS.md`. Paste it, attach it, or `@DOPPELGANGER.md`. The file is portable. It does not need an account, an upload API, or a hosted loader.
+`DOPPELGANGER.md` is an open Markdown voice file for any AI. One file teaches a model to write as one person or one organization. It is the writing-voice counterpart to `AGENTS.md`. Paste it, attach it, or `@DOPPELGANGER.md`. The file is portable. It does not need an account, an upload API, or a hosted loader.
 
 ## How to use
 
-1. Put [DOPPELGANGER.md](DOPPELGANGER.md) in the project root, or in a distinct directory such as `clients/acme/DOPPELGANGER.md`. Do not invent extra top-level filenames for spec 0.1.
+1. Put [DOPPELGANGER.md](DOPPELGANGER.md) in the project root, or in a distinct directory such as `clients/acme/DOPPELGANGER.md`. Do not invent extra top-level filenames for spec 0.1.1.
 2. Paste the file, attach it, or `@DOPPELGANGER.md`.
 3. Tell the model to write as this voice and to follow Hard bans and Safety.
 The committed [DOPPELGANGER.md](DOPPELGANGER.md) is a fictional format example. Author a real file against [SPEC.md](SPEC.md).
 
 ## Spec
 
-Spec 0.1. English. Canonical filename: `DOPPELGANGER.md`. Marker: `doppelganger-spec: 0.1`. License: CC0 1.0 Universal. See [SPEC.md](SPEC.md) and [LICENSE](LICENSE).
+Spec 0.1.1. The specification is written in English. A voice file MAY use any language. Canonical filename: `DOPPELGANGER.md`. Marker: `doppelganger-spec: 0.1.1`. A consumer MUST accept both `0.1` and `0.1.1`. License: CC0 1.0 Universal. See [SPEC.md](SPEC.md) and [LICENSE](LICENSE).
 
 Required sections, in this order:
 
 - Meta
 - Identity
-- Voice fingerprint (3 to 7 samples)
+- Voice fingerprint (3 to 7 samples in the language named by Meta `language`)
 - Tone rules
 - Hard bans
 - Safety

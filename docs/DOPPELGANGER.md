@@ -1,7 +1,7 @@
 ---
-doppelganger-spec: 0.1
+doppelganger-spec: 0.1.1
 ---
-<!-- doppelganger-spec: 0.1 -->
+<!-- doppelganger-spec: 0.1.1 -->
 
 # DOPPELGANGER.md
 
