@@ -112,7 +112,7 @@
           "@type": "ListItem",
           "position": 4,
           "name": "Tone rules",
-          "description": "MUST — concrete instructions, not adjectives"
+          "description": "MUST. Concrete instructions, not adjectives. Include words and constructions the subject reaches for, not only refusals. Each rule SHOULD have a Voice fingerprint sample. A rule MUST NOT depend on information the model cannot have at writing time"
         },
         {
           "@type": "ListItem",
@@ -130,7 +130,7 @@
           "@type": "ListItem",
           "position": 7,
           "name": "Register shifts",
-          "description": "SHOULD — how email, social, website, and proposal differ"
+          "description": "SHOULD. One entry for every Voice fingerprint register label. Each entry states typical length, opener and sign-off, how direct the ask is, and whether humor is allowed"
         },
         {
           "@type": "ListItem",
@@ -182,7 +182,7 @@
       <h1><span class="h1-mark">Structure</span>
       <span class="h1-line h1-line--sm">Ten sections, in one fixed order.</span></h1>
       <p class="lede">Six sections are required, three are recommended, one is optional. Levels follow RFC 2119.</p>
-      <p class="answer">A conformant DOPPELGÄNGER.md file opens with Meta and Identity, carries three to seven writing samples in total under Voice fingerprint, then states Tone rules, Hard bans, and Limits. A file that is missing a required section does not conform. A consumer MUST accept <code>Safety</code> as the title for Limits. The <a href="/spec">spec</a> is the source of truth.</p>
+      <p class="answer">A conformant DOPPELGÄNGER.md file MAY open with the spec marker and one optional H1. Nothing else MAY precede Meta. Meta and Identity follow, then three to seven writing samples in total under Voice fingerprint, then Tone rules, Hard bans, and Limits. A file that is missing a required section does not conform. A consumer MUST accept <code>Safety</code> as the title for Limits. The <a href="/spec">spec</a> is the source of truth.</p>
     </div>
   </section>
 
@@ -198,7 +198,7 @@
             <li class="fig__row" data-i="0"><div class="fig__cell" aria-hidden="true"><i data-w="72"></i><i data-w="44"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#meta">Meta</a></h3><p>name, kind, language, version, updated, license. Meta license is required. The author chooses the license. All rights reserved is a reasonable default</p></div></li>
             <li class="fig__row" data-i="1"><div class="fig__cell" aria-hidden="true"><i data-w="86"></i><i data-w="57"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#identity">Identity</a></h3><p>who is speaking, and what they do not do. The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent</p></div></li>
             <li class="fig__row" data-i="2"><div class="fig__cell" aria-hidden="true"><i data-w="93"></i><i data-w="78"></i><i data-w="61"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#voice-fingerprint">Voice fingerprint</a></h3><p>three to seven samples in total, in the language named by Meta language. Each sample starts with a <code>###</code> heading that is the register label. Each register label is a single lower-case token, hyphenated if two words. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private</p></div></li>
-            <li class="fig__row" data-i="3"><div class="fig__cell" aria-hidden="true"><i data-w="66"></i><i data-w="81"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#tone-rules">Tone rules</a></h3><p>concrete instructions, not adjectives</p></div></li>
+            <li class="fig__row" data-i="3"><div class="fig__cell" aria-hidden="true"><i data-w="66"></i><i data-w="81"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#tone-rules">Tone rules</a></h3><p>concrete instructions, words and constructions the subject reaches for, each rule with a Voice fingerprint sample. A rule MUST NOT depend on information the model cannot have at writing time</p></div></li>
             <li class="fig__row" data-i="4"><div class="fig__cell" aria-hidden="true"><i data-w="49"></i><i data-w="70"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#hard-bans">Hard bans</a></h3><p>words, phrases, and moves the model must not use</p></div></li>
             <li class="fig__row" data-i="5"><div class="fig__cell" aria-hidden="true"><i data-w="84"></i><i data-w="38"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#limits">Limits</a></h3><p>three sentences copied verbatim. Translation MAY. A consumer MUST accept Safety as the title</p></div></li>
           </ol>
@@ -206,7 +206,7 @@
         <div class="fig__group fig__group--should">
           <div class="fig__bracket"><span>SHOULD × 3</span><i aria-hidden="true"></i></div>
           <ol class="fig__rows">
-            <li class="fig__row" data-i="6"><div class="fig__cell" aria-hidden="true"><i data-w="59"></i><i data-w="74"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#register-shifts">Register shifts</a></h3><p>how email, social, website, and proposal differ</p></div></li>
+            <li class="fig__row" data-i="6"><div class="fig__cell" aria-hidden="true"><i data-w="59"></i><i data-w="74"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#register-shifts">Register shifts</a></h3><p>one entry for every Voice fingerprint register label. Each entry states typical length, opener and sign-off, how direct the ask is, and whether humor is allowed</p></div></li>
             <li class="fig__row" data-i="7"><div class="fig__cell" aria-hidden="true"><i data-w="80"></i><i data-w="52"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#before-and-after">Before and after</a></h3><p>generic AI copy rewritten in this voice</p></div></li>
             <li class="fig__row" data-i="8"><div class="fig__cell" aria-hidden="true"><i data-w="68"></i><i data-w="45"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#facts-and-claims">Facts and claims</a></h3><p>facts the model may treat as true</p></div></li>
           </ol>
@@ -234,10 +234,10 @@
           <tr><td><a href="/spec#meta">Meta</a></td><td><code>MUST</code></td><td>name, kind, language, version, updated, license. Meta <code>license</code> is required. The author chooses the license. <code>All rights reserved</code> is a reasonable default</td></tr>
           <tr><td><a href="/spec#identity">Identity</a></td><td><code>MUST</code></td><td>who is speaking, and what they do not do. The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent</td></tr>
           <tr><td><a href="/spec#voice-fingerprint">Voice fingerprint</a></td><td><code>MUST</code></td><td>three to seven samples in total, in the language named by Meta language. Each sample starts with a <code>###</code> heading that is the register label. Each register label is a single lower-case token, hyphenated if two words. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private</td></tr>
-          <tr><td><a href="/spec#tone-rules">Tone rules</a></td><td><code>MUST</code></td><td>concrete instructions, not adjectives</td></tr>
+          <tr><td><a href="/spec#tone-rules">Tone rules</a></td><td><code>MUST</code></td><td>concrete instructions, words and constructions the subject reaches for, each rule with a Voice fingerprint sample. A rule MUST NOT depend on information the model cannot have at writing time</td></tr>
           <tr><td><a href="/spec#hard-bans">Hard bans</a></td><td><code>MUST</code></td><td>words, phrases, and moves the model must not use</td></tr>
           <tr><td><a href="/spec#limits">Limits</a></td><td><code>MUST</code></td><td>three sentences copied verbatim. Translation into the file language MAY. A consumer MUST accept <code>Safety</code> as the title</td></tr>
-          <tr><td><a href="/spec#register-shifts">Register shifts</a></td><td><code>SHOULD</code></td><td>how email, social, website, and proposal differ</td></tr>
+          <tr><td><a href="/spec#register-shifts">Register shifts</a></td><td><code>SHOULD</code></td><td>one entry for every Voice fingerprint register label. Each entry states typical length, opener and sign-off, how direct the ask is, and whether humor is allowed</td></tr>
           <tr><td><a href="/spec#before-and-after">Before and after</a></td><td><code>SHOULD</code></td><td>generic AI copy rewritten in this voice</td></tr>
           <tr><td><a href="/spec#facts-and-claims">Facts and claims</a></td><td><code>SHOULD</code></td><td>facts the model may treat as true</td></tr>
           <tr><td><a href="/spec#how-to-use">How to use</a></td><td><code>MAY</code></td><td>a short pointer to the load guide</td></tr>
@@ -254,7 +254,7 @@
       <h2 id="conformance">When does a file conform?</h2>
       <p class="sub">All six statements have to be true at once.</p>
       <ol class="steps">
-        <li><div><h3>The marker is present</h3><p><code>doppelganger-spec: 0.1</code>, <code>doppelganger-spec: 0.1.1</code>, or <code>doppelganger-spec: 0.1.2</code>, in YAML frontmatter or in an HTML comment.</p></div></li>
+        <li><div><h3>The marker is present</h3><p><code>doppelganger-spec: 0.1</code>, <code>doppelganger-spec: 0.1.1</code>, or <code>doppelganger-spec: 0.1.2</code>, in YAML frontmatter or in an HTML comment. An optional H1 and the spec marker MAY precede Meta. Nothing else MAY precede Meta.</p></div></li>
         <li><div><h3>Every MUST section exists</h3><p>With the canonical title, in the canonical order, or with <code>Safety</code> in place of <code>Limits</code>.</p></div></li>
         <li><div><h3>Meta is complete</h3><p>name, kind, language, version, updated, and license. Meta <code>language</code> is a BCP 47 tag that names the language of the file. Meta <code>license</code> is required. The author chooses the license. <code>All rights reserved</code> is a reasonable default.</p></div></li>
         <li><div><h3><code>kind</code> is person or organization</h3><p>Nothing else is valid in 0.1.2. The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent.</p></div></li>
@@ -276,7 +276,7 @@
         <li><div><h3>Do not write unless asked</h3><p>A consumer MUST NOT write a fetched voice file to disk unless the user asked.</p></div></li>
         <li><div><h3>Let the user prompt win</h3><p>The user prompt overrides the voice file. The voice file overrides nothing the user or the host already set.</p></div></li>
       </ol>
-      <p class="note">When several voice files are in scope, the consumer MUST use the file nearest the working path. An explicitly attached or <code>@</code>-mentioned file MUST win over a discovered file.</p>
+      <p class="note">When several voice files are in scope, the consumer MUST use the file nearest the working path. An explicitly attached or <code>@</code>-mentioned file MUST win over a discovered file. The file SHOULD stay at or under 4600 characters. Voice fingerprint SHOULD hold at least 20 percent of the file. When a tool cannot take the whole file, a consumer MUST drop content in this order: Hard bans, then Tone rules, then two samples from Voice fingerprint, then Limits. Meta and the remaining Voice fingerprint samples stay.</p>
     </div>
   </section>
 

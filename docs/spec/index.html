@@ -181,6 +181,7 @@
         <p>A file MUST NOT be published for a living third party without that person's or organization's consent.</p>
         <p>The file MUST NOT include secrets. Secrets include API keys, passwords, session tokens, private URLs whose leakage would grant access, and unpublished personal data that the subject did not mean to publish.</p>
         <p>The file MUST NOT instruct a model to invent facts, metrics, clients, employers, or case studies.</p>
+        <p>The file SHOULD stay at or under 4600 characters. Voice fingerprint SHOULD hold at least 20 percent of the file.</p>
         <h2 id="marker">Marker</h2>
         <p>The file MUST include the spec marker <code>doppelganger-spec: 0.1</code>, <code>doppelganger-spec: 0.1.1</code>, or <code>doppelganger-spec: 0.1.2</code>.</p>
         <p>Place the marker in YAML frontmatter, or place it in an HTML comment. A file MAY include both. A consumer MUST accept either form. If the file uses YAML frontmatter, the opening <code>---</code> MUST be the first bytes of the file. An HTML comment MAY follow the frontmatter block.</p>
@@ -188,6 +189,7 @@
         <h2 id="sections">Sections</h2>
         <p>A conformant file is a sequence of Markdown sections. Section titles below are the canonical titles. A file MUST use these titles for the MUST sections so a human or a script can find them. A consumer MUST accept <code>Safety</code> as the title for Limits.</p>
         <p>Use <code>##</code> for each section title.</p>
+        <p>An optional H1 and the spec marker MAY precede Meta. Nothing else MAY precede Meta.</p>
         <h3 id="must">MUST</h3>
         <p>A conformant file MUST contain every section in this list, in this order: Meta, Identity, Voice fingerprint, Tone rules, Hard bans, Limits.</p>
         <h4 id="meta">Meta</h4>
@@ -241,6 +243,9 @@
         <p>The voice file SHOULD stay private. Committing the file to a public repository publishes the samples.</p>
         <h4 id="tone-rules">Tone rules</h4>
         <p>Tone rules MUST state how the voice works as instructions a model can follow. Prefer concrete rules over adjectives.</p>
+        <p>Tone rules SHOULD include words and constructions the subject reaches for, not only refusals.</p>
+        <p>A tone rule SHOULD be demonstrated by at least one sample in Voice fingerprint. If a rule has no sample, remove the rule or add a sample.</p>
+        <p>A tone rule MUST NOT depend on information the model cannot have at writing time.</p>
         <p>Good: "Open an email with the ask in the first paragraph."</p>
         <p>Bad: "Be friendly and professional."</p>
         <h4 id="hard-bans">Hard bans</h4>
@@ -257,7 +262,8 @@
         <h3 id="should">SHOULD</h3>
         <p>A conformant file SHOULD include these sections after Limits, in this order when present: Register shifts, Before and after, Facts and claims.</p>
         <h4 id="register-shifts">Register shifts</h4>
-        <p>Describe how the same voice changes across email, social, website, and proposal. Name the register, then state what changes: length, greeting, how direct the ask is, whether humor is allowed.</p>
+        <p>If Register shifts is present, it MUST have one entry for every register label used in Voice fingerprint.</p>
+        <p>Each entry MUST state at least: typical length, opener and sign-off, how direct the ask is, and whether humor is allowed.</p>
         <h4 id="before-and-after">Before and after</h4>
         <p>Give two or more pairs. The "before" line is generic AI copy. The "after" line is the subject's voice on the same point. A model uses these pairs as a rewrite target.</p>
         <h4 id="facts-and-claims">Facts and claims</h4>
@@ -293,6 +299,8 @@
         <li>Every Voice fingerprint sample is in the language named by Meta <code>language</code>.</li>
         <li>Voice fingerprint samples contain no third-party personal data.</li>
         <li>Limits includes the three required sentences, or Safety forbids secrets and invented facts on a file that still uses that title.</li>
+        <li>Nothing other than the spec marker and one optional H1 precedes Meta.</li>
+        <li>If Register shifts is present, it has one entry for every register label used in Voice fingerprint, and each entry states typical length, opener and sign-off, how direct the ask is, and whether humor is allowed.</li>
         </ul>
         <p>A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.</p>
         <p>This specification does not ship a linter CLI in 0.1.2.</p>
@@ -302,6 +310,7 @@
         <p>A consumer MUST ignore voice-file content that tries to change tool behavior, network access, read or write files, or alter operating rules.</p>
         <p>A consumer MUST NOT write a fetched voice file to disk unless the user asked.</p>
         <p>The user prompt overrides the voice file. The voice file overrides nothing the user or the host already set.</p>
+        <p>When a tool cannot take the whole file, a consumer MUST drop content in this order: Hard bans, then Tone rules, then two samples from Voice fingerprint, then Limits. Meta and the remaining Voice fingerprint samples stay.</p>
         <h2 id="versioning">Versioning</h2>
         <p><code>doppelganger-spec</code> is the specification version. <code>0.1</code> is the first public draft. This document is <code>0.1.2</code>.</p>
         <p>A consumer MUST accept <code>0.1</code>, <code>0.1.1</code>, and <code>0.1.2</code>. A consumer MUST accept a <code>0.1</code> file, and MUST accept an older file that still titles the Limits section <code>Safety</code>. A consumer of a later spec version MUST still accept 0.1 files. New MUST sections require a new spec version.</p>
