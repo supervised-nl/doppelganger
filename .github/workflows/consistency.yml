@@ -1,0 +1,13 @@
+name: consistency
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check mirrored files
+        run: node tools/check-consistency.mjs
