@@ -11,7 +11,9 @@ The committed [DOPPELGANGER.md](DOPPELGANGER.md) is a fictional format example. 
 
 ## Spec
 
-Spec 0.1.2. The specification is written in English. A voice file MAY use any language. Canonical filename: `DOPPELGANGER.md`. Marker: `doppelganger-spec: 0.1.2`. A consumer MUST accept `0.1`, `0.1.1`, and `0.1.2`. License: CC0 1.0 Universal. See [SPEC.md](SPEC.md) and [LICENSE](LICENSE).
+Spec 0.1.2. The specification is written in English. A voice file MAY use any language. Canonical filename: `DOPPELGANGER.md`. Marker: `doppelganger-spec: 0.1.2`. A consumer MUST accept `0.1`, `0.1.1`, and `0.1.2`. License of this specification: CC0 1.0 Universal. See [SPEC.md](SPEC.md) and [LICENSE](LICENSE). Meta `license` is required. The author chooses the license. `All rights reserved` is a reasonable default. Voice files usually contain the subject's own copyrighted writing.
+
+The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent. Samples MUST NOT contain third-party personal data. The voice file SHOULD stay private.
 
 Required sections, in this order:
 

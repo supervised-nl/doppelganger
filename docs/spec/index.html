@@ -177,6 +177,8 @@
         <p>A person or organization MAY keep more than one voice file. Additional files SHOULD use a distinct directory, such as <code>clients/acme/DOPPELGANGER.md</code>. Do not invent extra top-level filenames for V1.</p>
         <p>When several voice files are in scope, the consumer MUST use the file nearest the working path. An explicitly attached or <code>@</code>-mentioned file MUST win over a discovered file.</p>
         <p>The file MUST be Markdown. A voice file MAY be written in any language. Meta <code>language</code> MUST be a BCP 47 tag that names that language.</p>
+        <p>The subject MUST be the author, or a person or organization the author is authorized to write as.</p>
+        <p>A file MUST NOT be published for a living third party without that person's or organization's consent.</p>
         <p>The file MUST NOT include secrets. Secrets include API keys, passwords, session tokens, private URLs whose leakage would grant access, and unpublished personal data that the subject did not mean to publish.</p>
         <p>The file MUST NOT instruct a model to invent facts, metrics, clients, employers, or case studies.</p>
         <h2 id="marker">Marker</h2>
@@ -220,7 +222,7 @@
         </tr>
         <tr>
         <td>license</td>
-        <td>License of this voice file. <code>CC0-1.0</code> is recommended</td>
+        <td>License of this voice file. The author chooses the license. <code>All rights reserved</code> is a reasonable default. Voice files usually contain the subject's own copyrighted writing.</td>
         </tr>
         </tbody>
         </table>
@@ -232,8 +234,9 @@
         <h4 id="voice-fingerprint">Voice fingerprint</h4>
         <p>Voice fingerprint MUST include 3 to 7 short writing samples from the subject. Every Voice fingerprint sample MUST be written in the language named by Meta <code>language</code>.</p>
         <p>Each sample SHOULD name its register in a single label, such as <code>email</code>, <code>social</code>, <code>website</code>, or <code>proposal</code>.</p>
-        <p>Each sample SHOULD be real writing, lightly edited to remove secrets and third-party private data. Do not write samples that sound like generic AI copy. The point of this section is evidence of the actual voice that a model can imitate.</p>
+        <p>Each sample SHOULD be real writing. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. Do not write samples that sound like generic AI copy. The point of this section is evidence of the actual voice that a model can imitate.</p>
         <p>Prefer recent sent or published writing, such as email, posts, site pages, and blogs, over AI drafts. When the voice drifts, replace samples and bump Meta <code>version</code> and <code>updated</code>. The file does not expire. Do not require a calendar quota.</p>
+        <p>The voice file SHOULD stay private. Committing the file to a public repository publishes the samples.</p>
         <h4 id="tone-rules">Tone rules</h4>
         <p>Tone rules MUST state how the voice works as instructions a model can follow. Prefer concrete rules over adjectives.</p>
         <p>Good: "Open an email with the ask in the first paragraph."</p>
@@ -280,9 +283,11 @@
         <li>Every MUST section exists with the canonical title.</li>
         <li>Meta includes name, kind, language, version, updated, and license.</li>
         <li><code>kind</code> is <code>person</code> or <code>organization</code>.</li>
+        <li>The subject is the author, or a person or organization the author is authorized to write as.</li>
         <li>Meta <code>language</code> is a BCP 47 tag that names the language of the file.</li>
         <li>Voice fingerprint contains 3 to 7 samples.</li>
         <li>Every Voice fingerprint sample is in the language named by Meta <code>language</code>.</li>
+        <li>Voice fingerprint samples contain no third-party personal data.</li>
         <li>Safety forbids secrets and invented facts.</li>
         </ul>
         <p>A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.</p>

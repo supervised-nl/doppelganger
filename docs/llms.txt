@@ -7,7 +7,7 @@ speaking, three to seven real writing samples, concrete tone rules, hard bans, a
 limits. It is the writing-voice counterpart to AGENTS.md. Also called a tone of voice file,
 brand voice file, voice map, or write-like-me instructions.
 
-Spec version: 0.1.2. Spec prose: English. A voice file MAY use any language. Meta language MUST be a BCP 47 tag that names that language. Voice fingerprint samples MUST be in that language. A consumer MUST accept 0.1, 0.1.1, and 0.1.2. License: CC0 1.0 Universal.
+Spec version: 0.1.2. Spec prose: English. A voice file MAY use any language. Meta language MUST be a BCP 47 tag that names that language. Voice fingerprint samples MUST be in that language. A consumer MUST accept 0.1, 0.1.1, and 0.1.2. License of this specification: CC0 1.0 Universal. Meta license is required. The author chooses the license. All rights reserved is a reasonable default. Voice files usually contain the subject's own copyrighted writing. The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent. Samples MUST NOT contain third-party personal data. The voice file SHOULD stay private.
 
 ## Required sections, in order
 Meta, Identity, Voice fingerprint (3 to 7 samples), Tone rules, Hard bans, Safety.
@@ -45,4 +45,6 @@ attached or @-mentioned file wins over a discovered file.
 
 ## Limits
 Voice only. Not coding instructions, not a visual brand kit, not a knowledge base, not a place
-for secrets. The file must not instruct a model to invent facts, metrics, clients, or case studies.
+for secrets. Samples MUST NOT contain third-party personal data. Scrub names, contact details,
+and identifying case details. Committing the file to a public repository publishes the samples.
+The file must not instruct a model to invent facts, metrics, clients, or case studies.
