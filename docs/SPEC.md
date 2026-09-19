@@ -85,9 +85,13 @@ Identity is context for writing. It is not a resume, a visual brand kit, or a co
 
 #### Voice fingerprint
 
-Voice fingerprint MUST include 3 to 7 short writing samples from the subject. Every Voice fingerprint sample MUST be written in the language named by Meta `language`.
+Voice fingerprint MUST include 3 to 7 short writing samples from the subject. The 3 to 7 count is the total number of samples in the file, not a count per register. Multiple samples MAY share one register within that total.
 
-Each sample SHOULD name its register in a single label, such as `email`, `social`, `website`, or `proposal`.
+Every Voice fingerprint sample MUST be written in the language named by Meta `language`.
+
+Each sample MUST start with a `###` heading that is the register label.
+
+The register label MUST be a single lower-case token. If the register is two words, hyphenate them. Examples: `email`, `social`, `client-note`.
 
 Each sample SHOULD be real writing. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. Do not write samples that sound like generic AI copy. The point of this section is evidence of the actual voice that a model can imitate.
 
@@ -166,7 +170,9 @@ A file conforms to spec 0.1.2 when all of the following are true:
 - `kind` is `person` or `organization`.
 - The subject is the author, or a person or organization the author is authorized to write as.
 - Meta `language` is a BCP 47 tag that names the language of the file.
-- Voice fingerprint contains 3 to 7 samples.
+- Voice fingerprint contains 3 to 7 samples in total.
+- Each Voice fingerprint sample starts with a `###` heading that is the register label.
+- Each register label is a single lower-case token, hyphenated if two words.
 - Every Voice fingerprint sample is in the language named by Meta `language`.
 - Voice fingerprint samples contain no third-party personal data.
 - Safety forbids secrets and invented facts.

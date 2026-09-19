@@ -106,7 +106,7 @@
           "@type": "ListItem",
           "position": 3,
           "name": "Voice fingerprint",
-          "description": "MUST — three to seven samples in the language named by Meta language. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private"
+          "description": "MUST — three to seven samples in total, in the language named by Meta language. Each sample starts with a ### heading that is the register label. Each register label is a single lower-case token, hyphenated if two words. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private"
         },
         {
           "@type": "ListItem",
@@ -182,7 +182,7 @@
       <h1><span class="h1-mark">Structure</span>
       <span class="h1-line h1-line--sm">Ten sections, in one fixed order.</span></h1>
       <p class="lede">Six sections are required, three are recommended, one is optional. Levels follow RFC 2119.</p>
-      <p class="answer">A conformant DOPPELGÄNGER.md file opens with Meta and Identity, carries three to seven writing samples under Voice fingerprint, then states Tone rules, Hard bans, and Safety. A file that is missing a required section does not conform. The <a href="/spec">spec</a> is the source of truth.</p>
+      <p class="answer">A conformant DOPPELGÄNGER.md file opens with Meta and Identity, carries three to seven writing samples in total under Voice fingerprint, then states Tone rules, Hard bans, and Safety. A file that is missing a required section does not conform. The <a href="/spec">spec</a> is the source of truth.</p>
     </div>
   </section>
 
@@ -197,7 +197,7 @@
           <ol class="fig__rows">
             <li class="fig__row" data-i="0"><div class="fig__cell" aria-hidden="true"><i data-w="72"></i><i data-w="44"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#meta">Meta</a></h3><p>name, kind, language, version, updated, license. Meta license is required. The author chooses the license. All rights reserved is a reasonable default</p></div></li>
             <li class="fig__row" data-i="1"><div class="fig__cell" aria-hidden="true"><i data-w="86"></i><i data-w="57"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#identity">Identity</a></h3><p>who is speaking, and what they do not do. The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent</p></div></li>
-            <li class="fig__row" data-i="2"><div class="fig__cell" aria-hidden="true"><i data-w="93"></i><i data-w="78"></i><i data-w="61"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#voice-fingerprint">Voice fingerprint</a></h3><p>three to seven samples in the language named by Meta language. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private</p></div></li>
+            <li class="fig__row" data-i="2"><div class="fig__cell" aria-hidden="true"><i data-w="93"></i><i data-w="78"></i><i data-w="61"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#voice-fingerprint">Voice fingerprint</a></h3><p>three to seven samples in total, in the language named by Meta language. Each sample starts with a <code>###</code> heading that is the register label. Each register label is a single lower-case token, hyphenated if two words. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private</p></div></li>
             <li class="fig__row" data-i="3"><div class="fig__cell" aria-hidden="true"><i data-w="66"></i><i data-w="81"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#tone-rules">Tone rules</a></h3><p>concrete instructions, not adjectives</p></div></li>
             <li class="fig__row" data-i="4"><div class="fig__cell" aria-hidden="true"><i data-w="49"></i><i data-w="70"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#hard-bans">Hard bans</a></h3><p>words, phrases, and moves the model must not use</p></div></li>
             <li class="fig__row" data-i="5"><div class="fig__cell" aria-hidden="true"><i data-w="84"></i><i data-w="38"></i></div><div class="fig__lead" aria-hidden="true"><i></i></div><div class="fig__label"><h3><a href="/spec#safety">Safety</a></h3><p>no secrets, no invented facts, metrics, or clients</p></div></li>
@@ -233,7 +233,7 @@
           <tbody>
           <tr><td><a href="/spec#meta">Meta</a></td><td><code>MUST</code></td><td>name, kind, language, version, updated, license. Meta <code>license</code> is required. The author chooses the license. <code>All rights reserved</code> is a reasonable default</td></tr>
           <tr><td><a href="/spec#identity">Identity</a></td><td><code>MUST</code></td><td>who is speaking, and what they do not do. The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent</td></tr>
-          <tr><td><a href="/spec#voice-fingerprint">Voice fingerprint</a></td><td><code>MUST</code></td><td>three to seven samples in the language named by Meta language. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private</td></tr>
+          <tr><td><a href="/spec#voice-fingerprint">Voice fingerprint</a></td><td><code>MUST</code></td><td>three to seven samples in total, in the language named by Meta language. Each sample starts with a <code>###</code> heading that is the register label. Each register label is a single lower-case token, hyphenated if two words. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details. The voice file SHOULD stay private</td></tr>
           <tr><td><a href="/spec#tone-rules">Tone rules</a></td><td><code>MUST</code></td><td>concrete instructions, not adjectives</td></tr>
           <tr><td><a href="/spec#hard-bans">Hard bans</a></td><td><code>MUST</code></td><td>words, phrases, and moves the model must not use</td></tr>
           <tr><td><a href="/spec#safety">Safety</a></td><td><code>MUST</code></td><td>no secrets, no invented facts, metrics, or clients</td></tr>
@@ -258,7 +258,7 @@
         <li><div><h3>Every MUST section exists</h3><p>With the canonical title, in the canonical order.</p></div></li>
         <li><div><h3>Meta is complete</h3><p>name, kind, language, version, updated, and license. Meta <code>language</code> is a BCP 47 tag that names the language of the file. Meta <code>license</code> is required. The author chooses the license. <code>All rights reserved</code> is a reasonable default.</p></div></li>
         <li><div><h3><code>kind</code> is person or organization</h3><p>Nothing else is valid in 0.1.2. The subject MUST be the author, or a person or organization the author is authorized to write as. A file MUST NOT be published for a living third party without that person's or organization's consent.</p></div></li>
-        <li><div><h3>Voice fingerprint holds 3 to 7 samples</h3><p>Every sample is in the language named by Meta <code>language</code>. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details.</p></div></li>
+        <li><div><h3>Voice fingerprint holds 3 to 7 samples</h3><p>The 3 to 7 count is the file total, not a count per register. Each sample starts with a <code>###</code> heading that is the register label. Each register label is a single lower-case token, hyphenated if two words. Every sample is in the language named by Meta <code>language</code>. Samples MUST NOT contain third-party personal data. Scrub names, contact details, and identifying case details.</p></div></li>
         <li><div><h3>Safety forbids secrets and invented facts</h3><p>In the file's own words, with the meaning intact.</p></div></li>
       </ol>
       <p class="note">A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.</p>

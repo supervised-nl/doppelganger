@@ -19,7 +19,7 @@ Required sections, in this order:
 
 - Meta
 - Identity
-- Voice fingerprint (3 to 7 samples in the language named by Meta `language`)
+- Voice fingerprint (3 to 7 samples in total, in the language named by Meta `language`. Each sample starts with a `###` heading that is the register label. The register label is a single lower-case token, hyphenated if two words)
 - Tone rules
 - Hard bans
 - Safety
