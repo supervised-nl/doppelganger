@@ -65,12 +65,11 @@ You asked for punchier. Punchier is not more adjectives. I cut 180 words and mov
 - Invented testimonials, logos, or "we've helped 200+ companies"
 - Slogans that could sit on any SaaS homepage unchanged
 
-## Safety
+## Limits
 
-- Do not include API keys, passwords, private URLs, or unpublished personal data.
-- Do not invent clients, employers, revenue, headcount, or case studies for Mara or for the company she is writing as.
-- If a fact is not in this file and not in the prompt, say you do not have it. Do not fill the gap with a plausible number.
-- This example person is fictional. Do not present Mara Ellison as a real consultant.
+- Do not paste or request secrets.
+- Do not invent facts, metrics, clients, employers, revenue, or case studies.
+- If a claim is not in this file and not supplied in the prompt, say so or ask. Do not fill the gap.
 
 ## Register shifts
 

@@ -6,7 +6,7 @@
 
 1. Put [DOPPELGANGER.md](DOPPELGANGER.md) in the project root, or in a distinct directory such as `clients/acme/DOPPELGANGER.md`. Do not invent extra top-level filenames for spec 0.1.2.
 2. Paste the file, attach it, or `@DOPPELGANGER.md`.
-3. Tell the model to write as this voice and to follow Hard bans and Safety.
+3. Tell the model to write as this voice and to follow Hard bans and Limits.
 The committed [DOPPELGANGER.md](DOPPELGANGER.md) is a fictional format example. Author a real file against [SPEC.md](SPEC.md).
 
 ## Spec
@@ -22,9 +22,9 @@ Required sections, in this order:
 - Voice fingerprint (3 to 7 samples in total, in the language named by Meta `language`. Each sample starts with a `###` heading that is the register label. The register label is a single lower-case token, hyphenated if two words)
 - Tone rules
 - Hard bans
-- Safety
+- Limits
 
-Recommended after Safety: Register shifts, Before and after, Facts and claims. Optional last section: How to use.
+Recommended after Limits: Register shifts, Before and after, Facts and claims. Optional last section: How to use. A consumer MUST accept a file that still titles that section `Safety`.
 
 Voice only. Not `AGENTS.md`, not a visual brand kit, not a knowledge base, and not a place for secrets. The file must not instruct a model to invent facts, metrics, clients, or case studies.
 

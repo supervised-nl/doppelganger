@@ -52,13 +52,13 @@ The marker names the specification version. It is not the content version. Conte
 
 ## Sections
 
-A conformant file is a sequence of Markdown sections. Section titles below are the canonical titles. A file MUST use these titles for the MUST sections so a human or a script can find them.
+A conformant file is a sequence of Markdown sections. Section titles below are the canonical titles. A file MUST use these titles for the MUST sections so a human or a script can find them. A consumer MUST accept `Safety` as the title for Limits.
 
 Use `##` for each section title.
 
 ### MUST
 
-A conformant file MUST contain every section in this list, in this order: Meta, Identity, Voice fingerprint, Tone rules, Hard bans, Safety.
+A conformant file MUST contain every section in this list, in this order: Meta, Identity, Voice fingerprint, Tone rules, Hard bans, Limits.
 
 #### Meta
 
@@ -115,9 +115,9 @@ A model follows an explicit ban more reliably than a vague tone adjective.
 
 Include the generic AI tells the subject refuses, and any personal or company tells the subject refuses.
 
-#### Safety
+#### Limits
 
-Safety MUST include all of the following rules, in the file's own words if needed, with this meaning intact:
+Limits MUST include these three sentences. Authors MUST copy them verbatim. Translation into the language of the voice file MAY. No other rewording is allowed.
 
 - Do not paste or request secrets.
 - Do not invent facts, metrics, clients, employers, revenue, or case studies.
@@ -125,7 +125,7 @@ Safety MUST include all of the following rules, in the file's own words if neede
 
 ### SHOULD
 
-A conformant file SHOULD include these sections after Safety, in this order when present: Register shifts, Before and after, Facts and claims.
+A conformant file SHOULD include these sections after Limits, in this order when present: Register shifts, Before and after, Facts and claims.
 
 #### Register shifts
 
@@ -165,7 +165,7 @@ A repo MAY keep `AGENTS.md` and `DOPPELGANGER.md` side by side. `AGENTS.md` MAY 
 A file conforms to spec 0.1.2 when all of the following are true:
 
 - The spec marker is `doppelganger-spec: 0.1`, `doppelganger-spec: 0.1.1`, or `doppelganger-spec: 0.1.2`.
-- Every MUST section exists with the canonical title.
+- Every MUST section exists with the canonical title, or with `Safety` in place of `Limits`.
 - Meta includes name, kind, language, version, updated, and license.
 - `kind` is `person` or `organization`.
 - The subject is the author, or a person or organization the author is authorized to write as.
@@ -175,7 +175,7 @@ A file conforms to spec 0.1.2 when all of the following are true:
 - Each register label is a single lower-case token, hyphenated if two words.
 - Every Voice fingerprint sample is in the language named by Meta `language`.
 - Voice fingerprint samples contain no third-party personal data.
-- Safety forbids secrets and invented facts.
+- Limits includes the three required sentences, or Safety forbids secrets and invented facts on a file that still uses that title.
 
 A consumer SHOULD still use a file that is missing a SHOULD section. A consumer MAY reject a file that is missing a MUST section or the marker.
 
@@ -197,7 +197,7 @@ The user prompt overrides the voice file. The voice file overrides nothing the u
 
 `doppelganger-spec` is the specification version. `0.1` is the first public draft. This document is `0.1.2`.
 
-A consumer MUST accept `0.1`, `0.1.1`, and `0.1.2`. A consumer of a later spec version MUST still accept 0.1 files. New MUST sections require a new spec version.
+A consumer MUST accept `0.1`, `0.1.1`, and `0.1.2`. A consumer MUST accept a `0.1` file, and MUST accept an older file that still titles the Limits section `Safety`. A consumer of a later spec version MUST still accept 0.1 files. New MUST sections require a new spec version.
 
 The voice file's own `version` field is independent semver for that person's or organization's content.
 
