@@ -4,14 +4,14 @@
 
 ## How to use
 
-1. Put [DOPPELGANGER.md](DOPPELGANGER.md) in the project root, or in a distinct directory such as `clients/acme/DOPPELGANGER.md`. Do not invent extra top-level filenames for spec 0.1.1.
+1. Put [DOPPELGANGER.md](DOPPELGANGER.md) in the project root, or in a distinct directory such as `clients/acme/DOPPELGANGER.md`. Do not invent extra top-level filenames for spec 0.1.2.
 2. Paste the file, attach it, or `@DOPPELGANGER.md`.
 3. Tell the model to write as this voice and to follow Hard bans and Safety.
 The committed [DOPPELGANGER.md](DOPPELGANGER.md) is a fictional format example. Author a real file against [SPEC.md](SPEC.md).
 
 ## Spec
 
-Spec 0.1.1. The specification is written in English. A voice file MAY use any language. Canonical filename: `DOPPELGANGER.md`. Marker: `doppelganger-spec: 0.1.1`. A consumer MUST accept both `0.1` and `0.1.1`. License: CC0 1.0 Universal. See [SPEC.md](SPEC.md) and [LICENSE](LICENSE).
+Spec 0.1.2. The specification is written in English. A voice file MAY use any language. Canonical filename: `DOPPELGANGER.md`. Marker: `doppelganger-spec: 0.1.2`. A consumer MUST accept `0.1`, `0.1.1`, and `0.1.2`. License: CC0 1.0 Universal. See [SPEC.md](SPEC.md) and [LICENSE](LICENSE).
 
 Required sections, in this order:
 
