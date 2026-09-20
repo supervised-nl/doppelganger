@@ -256,3 +256,4 @@ td code{color:var(--soft)}
 .site-foot a{color:var(--muted);display:inline-flex;align-items:center;min-height:24px}
 .site-foot a:hover{color:#fff}
 .site-foot p{margin:0;max-width:62ch}
+.site-foot p + p{margin-top:10px}
