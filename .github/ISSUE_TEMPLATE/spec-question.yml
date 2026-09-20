@@ -1,0 +1,15 @@
+name: Spec question
+description: Ask what the spec requires or allows
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What do you want to know about SPEC.md or the DOPPELGANGER.md convention?
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: Spec section
+      description: Optional. A heading name such as Limits, or a URL to that heading.

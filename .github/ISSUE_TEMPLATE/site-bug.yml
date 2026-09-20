@@ -1,0 +1,17 @@
+name: Site bug
+description: Report a bug on doppelganger.md
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: The page that has the bug.
+      placeholder: https://doppelganger.md/
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
